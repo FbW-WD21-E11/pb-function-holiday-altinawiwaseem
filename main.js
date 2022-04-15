@@ -136,3 +136,29 @@ function numbersDivisibleBy3(arrayOfNumbers) {
 console.log(numbersDivisibleBy3([1, 2, 3, 4, 5, 6, 7, 8, 9]));
 console.log(numbersDivisibleBy3([2, 4, 8]));
 console.log(numbersDivisibleBy3([9]));
+
+// task 8
+console.log("\n task 8");
+
+function onlyLongWords(string) {
+  let newString = "";
+  let array = string.split(" ");
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].length > 4) {
+      newString += array[i] + " ";
+    }
+  }
+  return newString;
+}
+
+console.log(
+  onlyLongWords(
+    "Welcome to Wikipedia the free encyclopedia that anyone can edit"
+  )
+);
+console.log(onlyLongWords("The cat is on the table"))
+console.log(onlyLongWords("not many long ones here"))
+
+
+// task 9
+console.log("\n task 9")
