@@ -28,37 +28,50 @@ function containsVowel (string){
   console.log(containsVowel("table")); // true
   console.log(containsVowel("bcdfg")); // false
   console.log(containsVowel("a")); // true
-  containsVowel("aeiou"); // true
-  containsVowel("AEIOU"); // true
-  containsVowel(""); // false
-  containsVowel("Abc"); // true
-  console.log(containsVowel("z,z")) 
-  console.log(containsVowel("z z z")) 
+  console.log(containsVowel("aeiou")); // true
+  console.log(containsVowel("AEIOU")); // true
+  console.log(containsVowel("")); // false
+  console.log(containsVowel("Abc")); // true
+  console.log(containsVowel("z,z")) //false
+  console.log(containsVowel("z z z")) // false
   
   
 
 
 // task 3
-/* let numbers;
-let containsNumber = string =>{
-  
-  for (let i = 0; i < string.length; i++){
-    
-      if(typeof parseInt(string[i]) === "number")
-       numbers += parseInt(string[i])
-       console.log(string[i])
-       return numbers
-    
-  }
-  
-   
-}
+ /* console.log("\n task number 3")
+ function containsNumber(number){
 
-console.log(containsNumber("123")); // true */
-//console.log(containsNumber("dg")); // false
-// containsNumber("a2c"); // true
-// containsNumber("100px"); // true
-// containsNumber("1"); // true
-// containsNumber("0"); // true
-// containsNumber("$23.00"); // true
-// containsNumber("T-shirts x2"); // true
+ 
+  for (let i = 0; i < number.length; i++){
+        if(!isNaN(number[i])){   
+        return true
+    }
+   }
+     return false
+  } */
+  
+  console.log("\n task number 3")
+  function containsNumber(number){
+ 
+  
+   for (let i = 0; i < number.length; i++){
+         if(!isNaN(parseFloat(number[i]))){   
+         return true
+     }
+    }
+      return false
+   }
+  
+    
+  
+  
+
+console.log(containsNumber("123")); // true 
+console.log(containsNumber("dg")); // false
+console.log(containsNumber("a2c")); // true
+console.log(containsNumber("100px")) ; // true
+console.log(containsNumber("1")) ; // true
+console.log(containsNumber("0")) ; // true
+console.log(containsNumber("$23.00")) ; // true
+console.log( containsNumber("T-shirts x2")); // true 
