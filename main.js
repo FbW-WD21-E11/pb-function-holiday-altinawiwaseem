@@ -84,7 +84,6 @@ console.log(isFirstLetterUpperCase("A"));
 console.log(isFirstLetterUpperCase("Bianca"));
 console.log(isFirstLetterUpperCase("jim"));
 
-
 // task 5
 console.log("\n task 5");
 
@@ -98,26 +97,42 @@ function cheaperThan(prices, number) {
   return array;
 }
 console.log(cheaperThan([19.99, 29.87, 12.99, 5.0, 2.9, 100], 20));
-console.log(cheaperThan([19.99, 29.87, 12.99, 5.00, 2.90, 100], 90))
-console.log(cheaperThan([19.99, 29.87, 12.99, 5.00, 2.90, 100], 0))
-console.log(cheaperThan([19.99, 29.87, 12.99, 5.00, 2.90, 100], 5))
+console.log(cheaperThan([19.99, 29.87, 12.99, 5.0, 2.9, 100], 90));
+console.log(cheaperThan([19.99, 29.87, 12.99, 5.0, 2.9, 100], 0));
+console.log(cheaperThan([19.99, 29.87, 12.99, 5.0, 2.9, 100], 5));
 
 // task 6
-console.log("\n task 6")
+console.log("\n task 6");
 
-function wordsThatEndWithIng (word){
+function wordsThatEndWithIng(word) {
   let ingArray = [];
-  for (let i = 0; i < word.length; i++){
-    if(word[i].toLowerCase().endsWith("ing")){
-      ingArray.push(word[i])
+  for (let i = 0; i < word.length; i++) {
+    if (word[i].toLowerCase().endsWith("ing")) {
+      ingArray.push(word[i]);
     }
   }
-  return ingArray
+  return ingArray;
 }
 
-console.log(wordsThatEndWithIng(["table", "jeans", "working", "ping", "small"]))
-console.log(wordsThatEndWithIng(["table", "jeans", "small"]))
-console.log(wordsThatEndWithIng(["walking", "ing"]))
+console.log(
+  wordsThatEndWithIng(["table", "jeans", "working", "ping", "small"])
+);
+console.log(wordsThatEndWithIng(["table", "jeans", "small"]));
+console.log(wordsThatEndWithIng(["walking", "ing"]));
 
 //task 7
-console.log("\n task 7")
+console.log("\n task 7");
+
+function numbersDivisibleBy3(arrayOfNumbers) {
+  let arrayDivisibleBy3 = [];
+  for (let i = 0; i < arrayOfNumbers.length; i++) {
+    if (arrayOfNumbers[i] % 3 === 0) {
+      arrayDivisibleBy3.push(arrayOfNumbers[i]);
+    }
+  }
+  return arrayDivisibleBy3;
+}
+
+console.log(numbersDivisibleBy3([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+console.log(numbersDivisibleBy3([2, 4, 8]));
+console.log(numbersDivisibleBy3([9]));
