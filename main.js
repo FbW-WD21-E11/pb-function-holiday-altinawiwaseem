@@ -75,3 +75,24 @@ console.log(containsNumber("1")) ; // true
 console.log(containsNumber("0")) ; // true
 console.log(containsNumber("$23.00")) ; // true
 console.log( containsNumber("T-shirts x2")); // true 
+
+console.log("\n task 4")
+
+function isFirstLetterUpperCase (word){  
+  if (typeof word !== 'string' || word.length === 0) {
+    return false;
+  }
+  else if ( word[0] === word[0].toUpperCase()){
+    return true
+  
+} else {
+  return false
+}
+}
+
+console.log(isFirstLetterUpperCase("hello"))
+console.log(isFirstLetterUpperCase("Hello"))
+console.log(isFirstLetterUpperCase(""))
+console.log(isFirstLetterUpperCase("A"))
+console.log(isFirstLetterUpperCase("Bianca"))
+console.log(isFirstLetterUpperCase("jim"))
