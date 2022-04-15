@@ -84,6 +84,8 @@ console.log(isFirstLetterUpperCase("A"));
 console.log(isFirstLetterUpperCase("Bianca"));
 console.log(isFirstLetterUpperCase("jim"));
 
+
+// task 5
 console.log("\n task 5");
 
 function cheaperThan(prices, number) {
@@ -99,3 +101,23 @@ console.log(cheaperThan([19.99, 29.87, 12.99, 5.0, 2.9, 100], 20));
 console.log(cheaperThan([19.99, 29.87, 12.99, 5.00, 2.90, 100], 90))
 console.log(cheaperThan([19.99, 29.87, 12.99, 5.00, 2.90, 100], 0))
 console.log(cheaperThan([19.99, 29.87, 12.99, 5.00, 2.90, 100], 5))
+
+// task 6
+console.log("\n task 6")
+
+function wordsThatEndWithIng (word){
+  let ingArray = [];
+  for (let i = 0; i < word.length; i++){
+    if(word[i].toLowerCase().endsWith("ing")){
+      ingArray.push(word[i])
+    }
+  }
+  return ingArray
+}
+
+console.log(wordsThatEndWithIng(["table", "jeans", "working", "ping", "small"]))
+console.log(wordsThatEndWithIng(["table", "jeans", "small"]))
+console.log(wordsThatEndWithIng(["walking", "ing"]))
+
+//task 7
+console.log("\n task 7")
