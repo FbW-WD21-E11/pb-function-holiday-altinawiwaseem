@@ -1,19 +1,18 @@
 // test function
-let isEven = number => `is this number even?: ${number % 2 === 0} `;
+let isEven = number => { 
+  return number % 2 === 0;
+}
 
-let result = isEven(2);
-console.log(result);
+console.log(isEven(4));
 
 // task 1
 
 let isInRange = (number, min, max) => {
-  if (number >= min && number <= max) {
-    return `is this number ${number} in range between ${min} and ${max} ? true`;
-  } else {
-    return `is this number: ${number} in range between ${min} and ${max} ? false`;
-  }
+  
+    return number >= min && number <= max
+  
 };
-console.log(isInRange(4, 2, 4));
+console.log(isInRange(3, 2, 4));
 
 // task 2
 
