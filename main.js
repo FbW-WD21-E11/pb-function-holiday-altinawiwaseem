@@ -17,18 +17,23 @@ console.log(isInRange(3, 2, 4));
 // task 2
 
 function containsVowel (string){
-    str = false
+  let vowels = "aeiou";
   for (let i = 0; i < string.length; i++){
-   let vowels = "a, e, i, o, u";
    if( vowels.includes(string[i].toLowerCase())){
-      str = true
+      return true
    }
    }
-   return str
+   return false
   }
-
- 
- console.log(containsVowel("tbl"))
+  console.log(containsVowel("table")); // true
+  console.log(containsVowel("bcdfg")); // false
+  console.log(containsVowel("a")); // true
+  containsVowel("aeiou"); // true
+  containsVowel("AEIOU"); // true
+  containsVowel(""); // false
+  containsVowel("Abc"); // true
+  console.log(containsVowel("z,z")) 
+  console.log(containsVowel("z z z")) 
   
   
 
