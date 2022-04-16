@@ -205,3 +205,22 @@ let durationInHours = (duration) => {
 
 console.log(durationInHours([120, 60, 80, 90, 100]));
 console.log(durationInHours([50, 20, 180]));
+
+
+// task 12
+console.log("\n task 12");
+
+function reverseWords(words){
+  
+  let newArray = []
+  for (let i = 0; i < words.length; i++){
+
+      newArray.push(words[i].split("").reverse().join(""))
+  }
+  
+  return newArray
+
+  
+}
+
+console.log(reverseWords(["cat", "shoe", "one", "sos", "hello"]))
