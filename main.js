@@ -13,15 +13,15 @@ let isInRange = (number, min, max) => {
 console.log(isInRange(3, 2, 4));
 
 // task 2
-
+console.log("\n task 2")
 function containsVowel(string) {
   let vowels = "aeiou";
   for (let i = 0; i < string.length; i++) {
     if (vowels.includes(string[i].toLowerCase())) {
       return true;
-    }
+    } 
   }
-  return false;
+  return false
 }
 console.log(containsVowel("table")); // true
 console.log(containsVowel("bcdfg")); // false
@@ -34,19 +34,9 @@ console.log(containsVowel("z,z")); //false
 console.log(containsVowel("z z z")); // false
 
 // task 3
-/* console.log("\n task number 3")
- function containsNumber(number){
+   
 
- 
-  for (let i = 0; i < number.length; i++){
-        if(!isNaN(number[i])){   
-        return true
-    }
-   }
-     return false
-  } */
-
-console.log("\n task number 3");
+ console.log("\n task number 3");
 function containsNumber(number) {
   for (let i = 0; i < number.length; i++) {
     if (!isNaN(parseFloat(number[i]))) {
@@ -63,7 +53,13 @@ console.log(containsNumber("100px")); // true
 console.log(containsNumber("1")); // true
 console.log(containsNumber("0")); // true
 console.log(containsNumber("$23.00")); // true
-console.log(containsNumber("T-shirts x2")); // true
+console.log(containsNumber("T-shirts x2")); // true 
+
+
+
+
+
+
 
 console.log("\n task 4");
 
@@ -162,3 +158,20 @@ console.log(onlyLongWords("not many long ones here"))
 
 // task 9
 console.log("\n task 9")
+
+
+let addLeadingZero = numbers => {
+
+  let array = []
+  for (let i = 0; i < numbers.length; i++){
+
+    if (numbers[i] < 10){
+      array.push(`0${numbers[i]}`)
+    }else {array.push( `${numbers[i]}`)}
+  }
+  return array
+}
+
+console.log(addLeadingZero([0, 1, 2, 3, 10, 11, 12]))
+console.log(addLeadingZero([1, 100]))
+console.log(addLeadingZero([1, 2, 3]))
