@@ -175,3 +175,21 @@ let addLeadingZero = numbers => {
 console.log(addLeadingZero([0, 1, 2, 3, 10, 11, 12]))
 console.log(addLeadingZero([1, 100]))
 console.log(addLeadingZero([1, 2, 3]))
+
+
+// task 10
+console.log(`\n task 10`)
+
+function cutStrings(array, number){
+  newArray = [];
+  
+   for (let i = 0; i <array.length; i++){
+     let spl = array[i].split("")
+    newArray.push(array[i].slice(0 ,number) + "...")
+
+   }
+
+  
+  return newArray
+}
+console.log(cutStrings(["Hello my name is Max", "Today is quite sunny outside", "Cats are the best", "This movie is boring"], 10))
