@@ -13,15 +13,15 @@ let isInRange = (number, min, max) => {
 console.log(isInRange(3, 2, 4));
 
 // task 2
-console.log("\n task 2")
+console.log("\n task 2");
 function containsVowel(string) {
   let vowels = "aeiou";
   for (let i = 0; i < string.length; i++) {
     if (vowels.includes(string[i].toLowerCase())) {
       return true;
-    } 
+    }
   }
-  return false
+  return false;
 }
 console.log(containsVowel("table")); // true
 console.log(containsVowel("bcdfg")); // false
@@ -34,9 +34,8 @@ console.log(containsVowel("z,z")); //false
 console.log(containsVowel("z z z")); // false
 
 // task 3
-   
 
- console.log("\n task number 3");
+console.log("\n task number 3");
 function containsNumber(number) {
   for (let i = 0; i < number.length; i++) {
     if (!isNaN(parseFloat(number[i]))) {
@@ -53,13 +52,7 @@ console.log(containsNumber("100px")); // true
 console.log(containsNumber("1")); // true
 console.log(containsNumber("0")); // true
 console.log(containsNumber("$23.00")); // true
-console.log(containsNumber("T-shirts x2")); // true 
-
-
-
-
-
-
+console.log(containsNumber("T-shirts x2")); // true
 
 console.log("\n task 4");
 
@@ -152,44 +145,63 @@ console.log(
     "Welcome to Wikipedia the free encyclopedia that anyone can edit"
   )
 );
-console.log(onlyLongWords("The cat is on the table"))
-console.log(onlyLongWords("not many long ones here"))
-
+console.log(onlyLongWords("The cat is on the table"));
+console.log(onlyLongWords("not many long ones here"));
 
 // task 9
-console.log("\n task 9")
+console.log("\n task 9");
 
-
-let addLeadingZero = numbers => {
-
-  let array = []
-  for (let i = 0; i < numbers.length; i++){
-
-    if (numbers[i] < 10){
-      array.push(`0${numbers[i]}`)
-    }else {array.push( `${numbers[i]}`)}
+let addLeadingZero = (numbers) => {
+  let array = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < 10) {
+      array.push(`0${numbers[i]}`);
+    } else {
+      array.push(`${numbers[i]}`);
+    }
   }
-  return array
-}
+  return array;
+};
 
-console.log(addLeadingZero([0, 1, 2, 3, 10, 11, 12]))
-console.log(addLeadingZero([1, 100]))
-console.log(addLeadingZero([1, 2, 3]))
-
+console.log(addLeadingZero([0, 1, 2, 3, 10, 11, 12]));
+console.log(addLeadingZero([1, 100]));
+console.log(addLeadingZero([1, 2, 3]));
 
 // task 10
-console.log(`\n task 10`)
+console.log(`\n task 10`);
 
-function cutStrings(array, number){
+function cutStrings(array, number) {
   newArray = [];
-  
-   for (let i = 0; i <array.length; i++){
-     let spl = array[i].split("")
-    newArray.push(array[i].slice(0 ,number) + "...")
 
-   }
+  for (let i = 0; i < array.length; i++) {
+    let spl = array[i].split("");
+    newArray.push(array[i].slice(0, number) + "...");
+  }
 
-  
-  return newArray
+  return newArray;
 }
-console.log(cutStrings(["Hello my name is Max", "Today is quite sunny outside", "Cats are the best", "This movie is boring"], 10))
+console.log(
+  cutStrings(
+    [
+      "Hello my name is Max",
+      "Today is quite sunny outside",
+      "Cats are the best",
+      "This movie is boring",
+    ],
+    10
+  )
+);
+
+// task 11
+console.log("\n task 11");
+
+let durationInHours = (duration) => {
+  newArray = [];
+  for (let i = 0; i < duration.length; i++) {
+    newArray.push(Math.floor(duration[i] / 60));
+  }
+  return newArray;
+};
+
+console.log(durationInHours([120, 60, 80, 90, 100]));
+console.log(durationInHours([50, 20, 180]));
