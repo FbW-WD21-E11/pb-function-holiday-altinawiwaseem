@@ -264,11 +264,11 @@ console.log(sumEvenNumbers([-2, 4, 3]))
 
 
 // task 15
-console.log("\n task 15")
+/* console.log("\n task 15")
 
 let countByColor = (color) =>{
   let newArray = []
-  /* let stringColor = color.split(" ") */ 
+  
   for (let i = 0 ; i < color.length; i++){
     if (color[i].includes("Red")){
     newArray = color.length
@@ -276,4 +276,4 @@ let countByColor = (color) =>{
   }
   return newArray
 }
-console.log(countByColor(["Red", " Yellow shirt", "red"]))
+console.log(countByColor(["Red", " Yellow shirt", "red"])) */
