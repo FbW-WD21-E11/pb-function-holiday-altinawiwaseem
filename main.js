@@ -206,21 +206,74 @@ let durationInHours = (duration) => {
 console.log(durationInHours([120, 60, 80, 90, 100]));
 console.log(durationInHours([50, 20, 180]));
 
-
 // task 12
 console.log("\n task 12");
 
-function reverseWords(words){
-  
-  let newArray = []
-  for (let i = 0; i < words.length; i++){
-
-      newArray.push(words[i].split("").reverse().join(""))
+function reverseWords(words) {
+  let newArray = [];
+  for (let i = 0; i < words.length; i++) {
+    newArray.push(words[i].split("").reverse().join(""));
   }
-  
-  return newArray
 
-  
+  return newArray;
 }
 
-console.log(reverseWords(["cat", "shoe", "one", "sos", "hello"]))
+console.log(reverseWords(["cat", "shoe", "one", "sos", "hello"]));
+
+// task 13
+console.log("\n task 13");
+
+let countConsonants = (str) => {
+  let count = [];
+  let vowels = "aeiou";
+  let symbols = "!§$%&/()=?><|+*#'-_.;,:";
+
+  for (let i = 0; i < str.length; i++) {
+    if (
+      !vowels.includes(str[i]) &&
+      str[i] !== " " &&
+      !symbols.includes(str[i])
+    ) {
+      count.push(str);
+    }
+  }
+  return count.length;
+};
+console.log(countConsonants("hallo"));
+console.log(countConsonants("aeiou"));
+console.log(countConsonants("be right back"));
+console.log(countConsonants("JavaScript"));
+
+// task 14 
+console.log("\n task 14")
+
+let sumEvenNumbers = numbers =>{
+  let sum = null
+  for (let i = 0 ; i < numbers.length; i++){
+    if (numbers[i] % 2 === 0){
+      sum += numbers[i] 
+    }
+  }
+  return sum
+}
+
+console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6]))
+console.log(sumEvenNumbers([100]))
+console.log(sumEvenNumbers([100, 1, 3]))
+console.log(sumEvenNumbers([-2, 4, 3]))
+
+
+// task 15
+console.log("\n task 15")
+
+let countByColor = (color) =>{
+  let newArray = []
+  /* let stringColor = color.split(" ") */ 
+  for (let i = 0 ; i < color.length; i++){
+    if (color[i].includes("Red")){
+    newArray = color.length
+    }
+  }
+  return newArray
+}
+console.log(countByColor(["Red", " Yellow shirt", "red"]))
