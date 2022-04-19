@@ -224,7 +224,7 @@ console.log(reverseWords(["cat", "shoe", "one", "sos", "hello"]));
 console.log("\n task 13");
 
 let countConsonants = (str) => {
-  let count = [];
+  let count = 0;
   let vowels = "aeiou";
   let symbols = "!§$%&/()=?><|+*#'-_.;,:";
 
@@ -234,10 +234,10 @@ let countConsonants = (str) => {
       str[i] !== " " &&
       !symbols.includes(str[i])
     ) {
-      count.push(str);
+      count ++
     }
   }
-  return count.length;
+  return count
 };
 console.log(countConsonants("hallo"));
 console.log(countConsonants("aeiou"));
