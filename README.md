@@ -229,7 +229,7 @@ Examples:
 countByColor(["Red pen", "Yellow shirt"]); // [1, 1, 0]
 countByColor(["Red pen", "Yellow shirt", "Green salad"]); // [1, 1, 1]
 countByColor(["Pink hair", "Blue sky"]); // [0, 0, 0]
-countByColor(["Yellow table", "Yellow piano", "Green guitar]); // [0, 2, 1]
+countByColor(["Yellow table", "Yellow piano", "Green guitar"]); // [0, 2, 1]
 ```
 ### Task 16 - sumEvenOdd
 

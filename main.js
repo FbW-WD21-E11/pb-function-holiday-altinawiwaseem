@@ -244,36 +244,67 @@ console.log(countConsonants("aeiou"));
 console.log(countConsonants("be right back"));
 console.log(countConsonants("JavaScript"));
 
-// task 14 
-console.log("\n task 14")
+// task 14
+console.log("\n task 14");
 
-let sumEvenNumbers = numbers =>{
-  let sum = null
-  for (let i = 0 ; i < numbers.length; i++){
-    if (numbers[i] % 2 === 0){
-      sum += numbers[i] 
+let sumEvenNumbers = (numbers) => {
+  let sum = null;
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      sum += numbers[i];
     }
   }
+  return sum;
+};
+
+console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6]));
+console.log(sumEvenNumbers([100]));
+console.log(sumEvenNumbers([100, 1, 3]));
+console.log(sumEvenNumbers([-2, 4, 3]));
+
+// task 15
+console.log("\n task 15");
+
+let countByColor = (color) => {
+  let red = 0;
+  let yellow = 0;
+  let green = 0;
+
+  for (let i = 0; i < color.length; i++) {
+    if (color[i].toLowerCase().includes("red")) {
+      red++;
+    } else if (color[i].toLowerCase().includes("yellow")) {
+      yellow++;
+    } else if (color[i].toLowerCase().includes("green")) {
+      green++;
+    }
+  }
+  let newArray = [red, yellow, green];
+
+  return newArray;
+};
+console.log(countByColor(["Red", " Yellow shirt", "red"]));
+console.log(countByColor(["Red pen", "Yellow shirt", "Green salad"]));
+console.log(countByColor(["Pink hair", "Blue sky"]));
+console.log(countByColor(["Yellow table", "Yellow piano", "Green guitar"]));
+
+
+// task 16
+console.log("\n task 16")
+function sumEvenOdd (number){
+  let sumEven = 0
+  let sumOdd = 0
+  for (let i = 0; i < number.length; i++){
+    if (number[i] % 2 === 0){
+      sumEven += number[i]
+    } else if (number[i] % 2 === 1){
+      sumOdd += number[i]
+    }
+  }
+  let sum = [sumEven, sumOdd]
   return sum
 }
 
-console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6]))
-console.log(sumEvenNumbers([100]))
-console.log(sumEvenNumbers([100, 1, 3]))
-console.log(sumEvenNumbers([-2, 4, 3]))
-
-
-// task 15
-/* console.log("\n task 15")
-
-let countByColor = (color) =>{
-  let newArray = []
-  
-  for (let i = 0 ; i < color.length; i++){
-    if (color[i].includes("Red")){
-    newArray = color.length
-    }
-  }
-  return newArray
-}
-console.log(countByColor(["Red", " Yellow shirt", "red"])) */
+console.log(sumEvenOdd([1, 2, 3, 4, 5, 6]))
+console.log(sumEvenOdd([0, -2, 11]))
+console.log(sumEvenOdd([1, 3, 15]))
